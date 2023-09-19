@@ -1,10 +1,10 @@
-import { menu, topDealUsers, chartBoxUser, chartBoxProduct, chartBoxRevenue, chartBoxConversion, barChartBoxVisit, barChartBoxRevenue, userRows, products } from './data';
+import { menu, topDealUsers, chartBoxUser, chartBoxProduct, chartBoxRevenue, chartBoxConversion, barChartBoxVisit, barChartBoxRevenue, userRows, products, singleUser, singleProduct } from './data';
 import React, {createContext, useContext} from 'react';
 
 export const AppContext = createContext<CurrentUserContextType | null>(null);
 export const AppProvider = ({children}) => {
 	return (
-		<AppContext.Provider value={{menu, topDealUsers, chartBoxUser, chartBoxProduct, chartBoxRevenue, chartBoxConversion, barChartBoxVisit, barChartBoxRevenue, userRows, products }}>
+		<AppContext.Provider value={{menu, topDealUsers, chartBoxUser, chartBoxProduct, chartBoxRevenue, chartBoxConversion, barChartBoxVisit, barChartBoxRevenue, userRows, products, singleUser, singleProduct }}>
 			{children}
 		</AppContext.Provider>
 	);
